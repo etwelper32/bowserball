@@ -18,8 +18,10 @@ public class deadmenu extends javax.swing.JFrame {
      */
     public deadmenu() {
         initComponents();
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setVisible(true);
     }
-    
+///////////////////////this score needs to be set from the token class
     int y = 5;
     String x = y + "";
 
@@ -117,15 +119,22 @@ public class deadmenu extends javax.swing.JFrame {
 
     private void mainmenuActionPerformed(java.awt.event.ActionEvent evt) {                                         
         //start the main menu
+        this.setVisible(false);
+        mainmenu m = new mainmenu();
+        m.setVisible(true);
     }                                        
 
     private void playagainActionPerformed(java.awt.event.ActionEvent evt) {                                          
         //start the code over again
+        //then
+        MainFrame m = new MainFrame();
+        this.setVisible(false);
     }                                         
 
     private void exitActionPerformed(java.awt.event.ActionEvent evt) {                                     
         //exit the game
-                Jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setVisible(false);
+
 
     }                                    
 
