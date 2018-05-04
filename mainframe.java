@@ -3,7 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package finalproject;
+package bowserball;
+
+/**
+ *
+ * @author ethanwelp
+ */
+    /*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -43,5 +54,7 @@ public class MainFrame extends JPanel{
         frame.setSize(750, 750);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+        
     }
 }
+
