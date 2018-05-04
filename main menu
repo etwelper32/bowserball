@@ -1,4 +1,3 @@
-# bowserball
 package bowserball;
 
 import javax.swing.JFrame;
@@ -20,6 +19,8 @@ public class mainmenu extends javax.swing.JFrame {
      */
     public mainmenu() {
         initComponents();
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setVisible(true);
         
     }
 int y = 5;//store the high score component in this variable to be displayed
@@ -67,7 +68,7 @@ String x = y + "";
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Welcome to Bower Ball! This object of \nthis game is to avoid moving in the \ndirection of the balls being shot from four\ncorners of the screen. The balls will be shot\nbased on your position on the screen.\nGood Luck! High score is displayed in the \ncorner. ");
+        jTextArea1.setText("Welcome to Bower Ball! This object of \nthis game is to avoid moving in the \ndirection of the balls being shot from four\ncorners of the screen. The balls will be shot\nbased on your position on the screen. Use the\narrow keys to move. Good Luck! High score\n is displayed in the corner. ");
         jScrollPane1.setViewportView(jTextArea1);
 
         quit.setText("Exit");
@@ -122,11 +123,14 @@ String x = y + "";
 
     private void startbuttonActionPerformed(java.awt.event.ActionEvent evt) {                                            
         //run the main game method in here
+        MainFrame m = new MainFrame();
+        setVisible(false);
+        
     }                                           
 
     private void quitActionPerformed(java.awt.event.ActionEvent evt) {                                     
         // TODO add your handling code here:
-                        Jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                        setVisible(false);
 
     }                                    
 
