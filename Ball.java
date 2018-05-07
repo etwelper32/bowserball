@@ -1,0 +1,56 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package bowserball;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+/**
+ *
+ * @author ethanwelp
+ */
+public class Ball {
+      int r;
+    Color c;
+    int v_x, v_y;
+    int x,y;//position of balls
+    
+    public Ball(int xpos, int ypos, int cornerNum){//positions of the user/token and cannon corner
+        //1 is top left; 2 is top right; 3 is bottom right; 4 is bottom left
+        r = 25;
+        c = new Color(50,50,60);//blackish color found online
+        if(cornerNum ==1){
+            v_x =(int) xpos/10;
+            v_y =(int) ypos/10;
+        }
+        if(cornerNum == 2){
+            v_x = (int) -xpos/10;
+            v_y = (int) ypos/10;
+        }
+        if(cornerNum == 3){
+            v_x = (int) -xpos/10;
+            v_y = (int) -ypos/10;
+        }
+        if(cornerNum == 4){
+            v_x = (int) xpos/10;
+            v_y = (int) -ypos/10;
+        }
+    }
+    public void draw(Graphics g){//call in the mainframe class
+        x+=v_x;
+        x+=v_y;
+        g.setColor(c);
+        g.fillOval(x,y,r,r);
+    }
+    
+    public int getX(){
+        return x;
+    }
+    
+    public int getY(){
+        return y;
+    }
+}
